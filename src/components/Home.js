@@ -4,8 +4,8 @@ import './Home.css';
 const Home = ({ onSelect, onSettings }) => {
   return (
     <div className="home-container">
-      <h1 className="home-title">Math For Kids</h1>
-      <span className="sr-only" aria-live="polite">Welcome to Math For Kids! Choose an activity or open settings.</span>
+      <h1 className="home-title">Math For Fun</h1>
+      <span className="sr-only" aria-live="polite">Welcome to Math For Fun! Choose an activity or open settings.</span>
       <div className="home-buttons">
         <button className="home-button" onClick={() => onSelect('counting')} aria-label="Counting game">
           🧮
