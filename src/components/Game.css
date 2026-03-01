@@ -1,0 +1,158 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f0f8ff;
+}
+
+@media (prefers-contrast: more) {
+  .game-container {
+    background: #000;
+    color: #fff;
+  }
+  .game-button {
+    background: #fff;
+    color: #000;
+  }
+  .home-link {
+    color: #fff;
+  }
+}
+
+.home-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.game-button {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background: #81ecec;
+  cursor: pointer;
+}
+
+.game-button:focus,
+.home-button:focus,
+.settings-button:focus {
+  outline: 3px solid #0984e3;
+}
+
+.count-display,
+.comparison-display {
+  display: flex;
+  gap: 2rem;
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+.comparison-display .game-button {
+  padding: 2rem 3rem;
+}
+
+.score {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.8);
+  padding: 0.2rem 0.5rem;
+  border-radius: 8px;
+}
+
+.shape-display {
+  width: 150px;
+  height: 150px;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: #fff;
+  color: #000;
+  border-radius: 8px;
+}
+
+.shape-emoji {
+  font-size: 4rem;
+}
+
+/* option buttons layout */
+.options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* additional shapes styling for new shapes */
+.shape-star { /* simple five-pointed star using clip-path */
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 150px solid #f8c291;
+  position: relative;
+}
+.shape-star:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: -75px;
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 100px solid #f8c291;
+}
+/* other new shapes can use simple placeholders */
+.shape-heart {
+  background: #ff6b6b;
+  clip-path: polygon(50% 0%, 61% 15%, 75% 15%, 92% 35%, 100% 60%, 75% 98%, 50% 85%, 25% 98%, 0% 60%, 8% 35%, 25% 15%, 39% 15%);
+}
+/* for brevity, other shapes default to colored square */
+
+.shape-circle {
+  border-radius: 50%;
+  background: #ff6b6b;
+}
+
+.shape-square {
+  background: #4ecdc4;
+}
+
+.shape-triangle {
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 150px solid #ffe66d;
+}
+
+.celebrate {
+  animation: pop 0.5s ease-out;
+  display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .celebrate {
+    animation: none;
+  }
+}
+
+@keyframes pop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
