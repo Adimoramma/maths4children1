@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #f0f8ff;
+  background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
 }
 
 @media (prefers-contrast: more) {
@@ -37,14 +37,22 @@
   font-size: 1.2rem;
   border: none;
   border-radius: 8px;
-  background: #81ecec;
+  background: #6BCB77;
+  color: #fff;
   cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.game-button:hover {
+  background: #5CAD66;
+  transform: translateY(-2px);
 }
 
 .game-button:focus,
 .home-button:focus,
 .settings-button:focus {
-  outline: 3px solid #0984e3;
+  outline: 3px solid #FFE66D;
 }
 
 .count-display,
@@ -53,6 +61,7 @@
   gap: 2rem;
   font-size: 3rem;
   margin: 2rem;
+  color: #fff;
 }
 
 .comparison-display .game-button {
@@ -65,9 +74,11 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.9rem;
-  background: rgba(255,255,255,0.8);
+  background: #FFE66D;
+  color: #333;
   padding: 0.2rem 0.5rem;
   border-radius: 8px;
+  font-weight: bold;
 }
 
 .shape-display {
@@ -78,9 +89,10 @@
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-  background: #fff;
-  color: #000;
+  background: rgba(255,255,255,0.3);
+  color: #fff;
   border-radius: 8px;
+  border: 3px solid #FFE66D;
 }
 
 .shape-emoji {
